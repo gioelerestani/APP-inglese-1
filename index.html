@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang=\"it\">
+<head>
+<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+<title>English Master</title>
+<link rel=\"manifest\" href=\"manifest.json\">
+<link rel=\"icon\" href=\"assets/icon-192.png\">
+<meta name=\"theme-color\" content=\"#00a884\">
+<link rel=\"stylesheet\" href=\"style.css\">
+</head>
+<body>
+<div id=\"app\">
+<header class=\"topbar\">
+  <div class=\"brand\">🇬🇧 English Master</div>
+  <div class=\"top-actions\">
+    <button id=\"btn-theme\" title=\"Toggle tema\">🌓</button>
+    <button id=\"btn-install\" title=\"Installa App\" class=\"primary\">➕ Installa</button>
+  </div>
+</header>
+<main class=\"container\">
+  <section class=\"hero\"><h1>Impara l'inglese</h1><p>UI semplice, 1000+ esercizi, PWA offline.</p></section>
+  <section class=\"controls card\">
+    <div class=\"control-group\"><label>Livello</label>
+      <select id=\"level\"><option value=\"ALL\">Tutti</option><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option></select>
+    </div>
+    <div class=\"control-group\"><label>Tipologia</label>
+      <select id=\"etype\">
+        <option value=\"ALL\">Tutte</option>
+        <option value=\"vocab\">Vocabolario</option><option value=\"cloze\">Completa</option><option value=\"order\">Ordina parole</option>
+        <option value=\"match\">Abbinamenti</option><option value=\"listening\">Ascolto</option><option value=\"dialogue\">Dialogo</option>
+        <option value=\"reading\">Lettura</option><option value=\"writing\">Scrittura</option>
+      </select>
+    </div>
+    <div class=\"control-group\"><button id=\"btn-start\" class=\"primary\">Inizia pratica ▶</button></div>
+  </section>
+  <section class=\"practice card\">
+    <div class=\"practice-header\"><div>🔔 Esercizio <span id=\"counter\">0/0</span></div><div>⭐ XP: <span id=\"xp\">0</span> | 🔥 Streak: <span id=\"streak\">0</span></div></div>
+    <div id=\"prompt\" class=\"prompt\"></div>
+    <div id=\"workspace\" class=\"workspace\"></div>
+    <div class=\"actions\">
+      <button id=\"btn-check\" class=\"primary\">Controlla</button>
+      <button id=\"btn-skip\">Salta</button>
+      <button id=\"btn-next\" disabled>Avanti ➜</button>
+      <button id=\"btn-speak\">▶ Ascolta</button>
+    </div>
+    <div id=\"feedback\" class=\"feedback\"></div>
+  </section>
+</main>
+<nav class=\"bottombar\">
+  <button data-tab=\"home\" class=\"active\">🏠 Home</button>
+  <button data-tab=\"practice\">🧠 Pratica</button>
+  <button data-tab=\"stats\">📈 Statistiche</button>
+  <button data-tab=\"settings\">⚙️ Impostazioni</button>
+</nav>
+<section id=\"panel-stats\" class=\"panel card hidden\">
+  <h2>Statistiche</h2><p>Totale esercizi svolti: <span id=\"stat-done\">0</span></p><p>XP totali: <span id=\"stat-xp\">0</span></p>
+</section>
+<section id=\"panel-settings\" class=\"panel card hidden\">
+  <h2>Impostazioni</h2><label><input type=\"checkbox\" id=\"darkmode\"> Tema scuro</label><p class=\"muted\">I progressi sono salvati sul dispositivo.</p>
+</section>
+</div>
+<script src=\"exercises-inline.js\"></script>
+<script src=\"app.js\"></script>
+</body></html>

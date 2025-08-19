@@ -1,0 +1,15 @@
+
+*{box-sizing:border-box}:root{--bg:#f6f7fb;--card:#fff;--text:#222;--muted:#667;--primary:#00a884}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#fff;position:sticky;top:0;border-bottom:1px solid #eee}
+.brand{font-weight:800}.primary{background:var(--primary);color:#fff;border:none;padding:10px 14px;border-radius:10px;cursor:pointer}
+.container{max-width:960px;margin:0 auto;padding:16px}.card{background:var(--card);border:1px solid #eee;border-radius:16px;padding:16px;margin:12px 0}
+.controls{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end}
+.control-group label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+.practice-header{display:flex;justify-content:space-between;margin-bottom:8px;color:var(--muted)}
+.prompt{font-size:18px;margin:8px 0 12px}.workspace{min-height:70px;padding:8px;border:1px dashed #ccc;border-radius:12px;background:#fafafa}
+.actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.feedback{margin-top:10px;font-weight:600}.muted{color:var(--muted)}
+.bottombar{position:sticky;bottom:0;display:flex;justify-content:space-around;padding:10px;background:#fff;border-top:1px solid #eee}
+.bottombar button{background:transparent;border:none;padding:8px 10px;border-radius:10px}.bottombar button.active{background:#eef}
+.panel{position:fixed;left:50%;transform:translateX(-50%);bottom:60px;max-width:940px;width:calc(100% - 24px);display:block}.hidden{display:none}
+.dark{--bg:#0f1115;--card:#171a21;--text:#e9eef5;--muted:#9aa3b2;--primary:#00c78b}
